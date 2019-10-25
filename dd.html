@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<title>利用jsapi实现免登</title>
+<script src="https://g.alicdn.com/dingding/dingtalk-jsapi/2.7.13/dingtalk.open.js"></script>
+
+</head>
+<body>
+
+</body>
+<script>
+dd.ready(function() {
+	alert('dsds')
+    dd.runtime.permission.requestAuthCode({
+        corpId: _config.corpId, // 企业id
+        onSuccess: function (info) {
+                  code = info.code // 通过该免登授权码可以获取用户身份
+        }});
+});
+
+</script>
+</html>
+
